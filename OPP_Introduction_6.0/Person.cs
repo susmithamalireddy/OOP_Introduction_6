@@ -6,12 +6,18 @@ namespace OOP_Introduction
     {
         public string firstName;
         public string lastName;
+        public DateTime DateOfBirth;
+
+        public DateTime DoB()
+        {
+            return DateOfBirth;
+        }
 
         // class variables as properties
         //public string firstName { get; set; }
 
         // static variables
-        public static string salutationMr = "Mr";
+        public string salutation;
 
         /// <summary>
         /// Method to return the person's name
@@ -20,7 +26,7 @@ namespace OOP_Introduction
         /// <returns>Person's full name</returns>
         public string getName()
         {
-            return firstName + " " + lastName;
+            return salutation + " " + firstName + " " + lastName;
         }
 
         /// <summary>
@@ -36,9 +42,9 @@ namespace OOP_Introduction
         /// A simple parametrized constructor
         /// </summary>
         /// <param name="lname">last name of the person</param>
-        public Person(string lname)
+        public Person(string lastName)
         {
-            lastName = lname;
-        }
+            this.lastName = lastName;
+        } 
     }
 }

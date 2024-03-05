@@ -10,12 +10,15 @@ namespace OOP_Introduction
             Person Student = new Person
             {
                 firstName = "John",
-                lastName = "Doe"
+                lastName = "Doe",
+                salutation = "Mr."
             };
 
 
             // after fixing access permissions
             Debug.WriteLine(Student.firstName);
+            string fullName = Student.getName();
+            Debug.WriteLine(fullName);
 
             // using the constructor
             Person Teacher = new Person();
